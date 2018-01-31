@@ -6,10 +6,7 @@ import android.support.annotation.NonNull;
 import com.evernote.android.job.Job;
 import com.evernote.android.job.JobRequest;
 import com.greenteadev.unive.clair.ClairApplication;
-import com.greenteadev.unive.clair.data.model.MeasureData;
 import com.greenteadev.unive.clair.util.RxUtil;
-
-import java.util.List;
 
 import javax.inject.Inject;
 
@@ -74,5 +71,4 @@ public class ClearDataJob extends Job {
                 .build()
                 .schedule();
     }
-
 }
