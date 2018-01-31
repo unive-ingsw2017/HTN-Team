@@ -1,0 +1,33 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_title_data">
+        <PreferenceScreen
+            android:key="@string/pref_data_bookmark"
+            android:summary="@string/settings_bookmark_station_summary"
+            android:title="@string/settings_bookmark_station">
+            <intent
+                android:targetPackage="@string/applicationId"
+                android:targetClass="com.greenteadev.unive.clair.ui.settings.SettingsBookmarkActivity"/>
+        </PreferenceScreen>
+
+        <Preference
+            android:key="@string/pref_data_clear"
+            android:title="@string/settings_clear_offline"
+            android:summary="@string/settings_clear_offline_summary"></Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_title_sync">
+
+        <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+             dismiss it. -->
+        <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+        <ListPreference
+            android:defaultValue="60"
+            android:entries="@array/settings_sync_frequency_titles"
+            android:entryValues="@array/pref_sync_frequency_values"
+            android:key="@string/pref_data_synk_frequency"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/settings_title_sync_frequency" />
+    </PreferenceCategory>
+</PreferenceScreen>

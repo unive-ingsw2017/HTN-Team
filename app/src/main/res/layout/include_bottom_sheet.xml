@@ -4,35 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_sheet_peek_height"
-        android:background="@color/theme_primary">
+        android:background="@color/theme_primary"
+        android:clipChildren="false"
+        android:clipToPadding="false">
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/bottom_sheet_header"
             android:layout_width="match_parent"
             android:layout_height="@dimen/bottom_sheet_peek_height"
+            android:clipChildren="false"
+            android:clipToPadding="false"
             android:orientation="vertical"
             android:padding="@dimen/bottom_sheet_peek_padding">
 
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/bottom_sheet_title"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/bottom_sheet_container"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/text_large_title" />
+                android:layout_toStartOf="@+id/button_bookmark"
+                android:orientation="vertical">
 
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/bottom_sheet_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/bottom_sheet_peek_inner_margin"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/text_small" />
-        </LinearLayout>
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/bottom_sheet_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/bottom_sheet_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/bottom_sheet_peek_inner_margin"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/button_bookmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/bottom_sheet_container"
+                android:layout_alignParentRight="true"
+                app:sparkbutton_activeImage="@drawable/ic_heart_on"
+                app:sparkbutton_iconSize="30dp"
+                app:sparkbutton_inActiveImage="@drawable/ic_heart_off"
+                app:sparkbutton_primaryColor="@color/heart_primary_color"
+                app:sparkbutton_secondaryColor="@color/heart_secondary_color" />
+        </RelativeLayout>
 
         <com.wang.avi.AVLoadingIndicatorView
             android:id="@+id/bottom_sheet_loader"
@@ -44,6 +72,244 @@
             app:indicatorName="BallGridPulseIndicator" />
     </FrameLayout>
 
-    <include layout="@layout/items" />
+    <LinearLayout
+        android:id="@+id/bottom_sheet_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/bottom_sheet_peek_inner_margin">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/vertical_margin">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/inner_vertical_margin"
+                android:layout_marginBottom="@dimen/inner_vertical_margin"
+                android:layout_marginLeft="@dimen/inner_horizontal_margin"
+                android:layout_marginRight="@dimen/inner_horizontal_margin"
+                android:layout_marginTop="@dimen/inner_vertical_margin"
+                android:text="@string/main_current_period"
+                android:textColor="@color/theme_primary"
+                android:textSize="@dimen/text_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/ozone"
+                        android:textColor="@color/theme_primary"
+                        android:textSize="@dimen/text_body" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tvOzoneValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/theme_primary"
+                            android:textSize="@dimen/text_huge" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tvOzoneUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/tvOzoneValue"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toRightOf="@id/tvOzoneValue"
+                            android:lineSpacingExtra="@dimen/bottom_sheet_peek_inner_margin"
+                            android:textAlignment="center"
+                            android:textColor="@color/theme_primary"
+                            android:textSize="@dimen/text_small" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvOzoneDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/theme_primary"
+                        android:textSize="@dimen/text_small" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/horizontal_margin"
+                    android:background="@color/theme_primary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/pm10"
+                        android:textColor="@color/theme_primary"
+                        android:textSize="@dimen/text_body" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tvPMValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/theme_primary"
+                            android:textSize="@dimen/text_huge" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tvPMUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/tvPMValue"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toRightOf="@id/tvPMValue"
+                            android:lineSpacingExtra="16dp"
+                            android:textColor="@color/theme_primary"
+                            android:textSize="@dimen/text_small" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvPMDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/theme_primary"
+                        android:textSize="@dimen/text_small" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/inner_vertical_margin"
+            android:text="@string/main_last_week"
+            android:textColor="@color/theme_primary"
+            android:textSize="@dimen/text_title" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/btn_calendar"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/inner_vertical_margin"
+                    android:text="@string/main_start_date"
+                    android:textColor="@color/theme_primary"
+                    android:textSize="@dimen/text_large" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/theme_primary"
+                    app:cardElevation="0dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/bottom_sheet_start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/inner_vertical_margin"
+                        android:layout_marginLeft="@dimen/inner_horizontal_margin"
+                        android:layout_marginRight="@dimen/inner_horizontal_margin"
+                        android:layout_marginTop="@dimen/inner_vertical_margin"
+                        android:text="11/12/17"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/btn_calendar"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_history" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/btn_calendar"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/inner_vertical_margin"
+                    android:text="@string/main_end_date"
+                    android:textColor="@color/theme_primary"
+                    android:textSize="@dimen/text_large" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/theme_primary"
+                    app:cardElevation="0dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/bottom_sheet_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/inner_vertical_margin"
+                        android:layout_marginLeft="@dimen/inner_horizontal_margin"
+                        android:layout_marginRight="@dimen/inner_horizontal_margin"
+                        android:layout_marginTop="@dimen/inner_vertical_margin"
+                        android:text="17/12/17"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/week_chart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chart_height"
+            android:layout_marginTop="@dimen/vertical_margin" />
+    </LinearLayout>
 </LinearLayout>

@@ -11,10 +11,21 @@
 
     <!-- Theme Colors -->
     <color name="theme_primary">#42A5F5</color>
-    <color name="theme_primary_dark">#0077c2</color>
-    <color name="theme_primary_light">#80d6ff</color>
-    <color name="theme_accent">#e57b1e</color>
+    <color name="theme_primary_dark">#0077C2</color>
+    <color name="theme_primary_light">#80d6FF</color>
+    <color name="theme_primary_lighter">#cceeff</color>
+    <color name="theme_accent">#E57B1E</color>
+    <color name="theme_palette_orange">#FAB57A</color>
+    <color name="theme_palette_red">#F06868</color>
+    <color name="theme_palette_yellow">#EDF798</color>
+    <color name="theme_palette_green">#68F0AC</color>
+    <color name="theme_palette_violet">#6868f0</color>
 
     <color name="black_primary_text">@color/black</color>
     <color name="black_secondary_text">#88000000</color>
+
+    <color name="heart_primary_color">#da4439</color>
+    <color name="heart_secondary_color">#8a098c</color>
+
+    <color name="charcoal">#ffffff</color>
 </resources>

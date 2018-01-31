@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.greenteadev.unive.clair.ui.history.HistoryActivity$MeasureFragment">
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottomContainer"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:layout_marginBottom="@dimen/vertical_margin"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/rlBottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/inner_vertical_margin"
+        android:paddingLeft="@dimen/inner_horizontal_margin"
+        android:paddingRight="@dimen/inner_horizontal_margin"
+        android:paddingTop="@dimen/inner_vertical_margin">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvBottomTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_primary"
+            android:textSize="@dimen/text_small"
+            android:text="@string/history_best_day"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvBottomDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_primary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBottomTitle" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvTrend"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginRight="@dimen/inner_horizontal_margin"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:textColor="@color/theme_primary"
+            android:textSize="@dimen/text_headline"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/iwTrend"
+            app:layout_constraintRight_toLeftOf="@+id/iwTrend"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iwTrend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:tint="@color/theme_primary" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

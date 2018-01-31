@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/maps_marker_size"
+    android:layout_height="@dimen/maps_marker_size">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/theme_palette_orange"
+        app:layout_constraintBottom_toTopOf="@+id/spacer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ozoneValueContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvOzoneLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvOzoneValue"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="right"
+                android:text="56"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tvOzoneUnit" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvOzoneUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:lineSpacingExtra="@dimen/bottom_sheet_peek_inner_margin"
+                android:text="ug/m3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintBottom_toBottomOf="@id/tvOzoneValue"
+                app:layout_constraintLeft_toRightOf="@id/tvOzoneValue" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvOzoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/ozone"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ozoneValueContainer"
+            app:textAllCaps="true" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/spacer"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTop"
+        app:layout_constraintBottom_toTopOf="@+id/clBottom"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/theme_palette_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spacer">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/pmValueContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPmLabel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvPmValue"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="right"
+                android:text="56"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tvPmUnit" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvPmUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:lineSpacingExtra="@dimen/bottom_sheet_peek_inner_margin"
+                android:text="ug/m3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintBottom_toBottomOf="@id/tvPmValue"
+                app:layout_constraintLeft_toRightOf="@id/tvPmValue" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvPmLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/pm10"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pmValueContainer"
+            app:textAllCaps="true" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
