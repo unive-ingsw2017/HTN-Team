@@ -2,11 +2,11 @@ package com.greenteadev.unive.clair.ui.about;
 
 import android.os.Bundle;
 
-import butterknife.BindView;
+import com.greenteadev.unive.clair.ui.base.BaseActivity;
+
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import it.greenteadev.unive.clair.R;
-import com.greenteadev.unive.clair.ui.base.BaseActivity;
 
 /**
  * Created by Hitech95 on 30/01/2018.

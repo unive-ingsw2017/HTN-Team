@@ -1,9 +1,10 @@
 package com.greenteadev.unive.clair.injection.component;
 
-import dagger.Component;
 import com.greenteadev.unive.clair.injection.ConfigPersistent;
 import com.greenteadev.unive.clair.injection.module.ActivityModule;
 import com.greenteadev.unive.clair.ui.base.BaseActivity;
+
+import dagger.Component;
 
 /**
  * A dagger component that will live during the lifecycle of an Activity but it won't

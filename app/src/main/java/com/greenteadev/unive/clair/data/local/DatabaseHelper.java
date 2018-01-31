@@ -1,9 +1,12 @@
 package com.greenteadev.unive.clair.data.local;
 
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.VisibleForTesting;
 
+import com.greenteadev.unive.clair.data.local.exception.DatabaseInsertException;
+import com.greenteadev.unive.clair.data.model.MeasureData;
+import com.greenteadev.unive.clair.data.model.MeasurePlotData;
+import com.greenteadev.unive.clair.data.model.Station;
 import com.squareup.sqlbrite2.BriteDatabase;
 import com.squareup.sqlbrite2.SqlBrite;
 
@@ -16,12 +19,6 @@ import javax.inject.Singleton;
 import io.reactivex.Observable;
 import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
-import timber.log.Timber;
-
-import com.greenteadev.unive.clair.data.local.exception.DatabaseInsertException;
-import com.greenteadev.unive.clair.data.model.MeasureData;
-import com.greenteadev.unive.clair.data.model.MeasurePlotData;
-import com.greenteadev.unive.clair.data.model.Station;
 
 @Singleton
 public class DatabaseHelper {

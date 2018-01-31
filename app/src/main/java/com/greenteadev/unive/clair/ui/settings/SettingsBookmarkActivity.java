@@ -12,6 +12,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.evernote.android.state.StateSaver;
+import com.greenteadev.unive.clair.data.model.Station;
+import com.greenteadev.unive.clair.ui.base.BaseActivity;
+import com.greenteadev.unive.clair.util.DialogFactory;
+import com.greenteadev.unive.clair.util.ui.RecyclerTouchListener;
 import com.squareup.leakcanary.RefWatcher;
 
 import java.util.List;
@@ -21,12 +25,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import it.greenteadev.unive.clair.R;
-
-import com.greenteadev.unive.clair.data.model.Station;
-import com.greenteadev.unive.clair.ui.base.BaseActivity;
-import com.greenteadev.unive.clair.util.DialogFactory;
-import com.greenteadev.unive.clair.util.ui.RecyclerTouchListener;
-
 import timber.log.Timber;
 
 /**

@@ -1,9 +1,9 @@
 package com.greenteadev.unive.clair.ui.settings;
 
-import java.util.List;
-
 import com.greenteadev.unive.clair.data.model.Station;
 import com.greenteadev.unive.clair.ui.base.MvpView;
+
+import java.util.List;
 
 /**
  * Created by Hitech95 on 30/01/2018.

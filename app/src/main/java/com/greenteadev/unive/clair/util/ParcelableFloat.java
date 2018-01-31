@@ -1,6 +1,5 @@
 package com.greenteadev.unive.clair.util;
 
-import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.google.auto.value.AutoValue;

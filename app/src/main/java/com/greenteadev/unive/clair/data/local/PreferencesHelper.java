@@ -4,10 +4,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import com.greenteadev.unive.clair.injection.ApplicationContext;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
-
-import com.greenteadev.unive.clair.injection.ApplicationContext;
 
 import it.greenteadev.unive.clair.R;
 

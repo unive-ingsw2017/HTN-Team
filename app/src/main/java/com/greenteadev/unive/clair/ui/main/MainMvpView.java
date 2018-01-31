@@ -1,10 +1,10 @@
 package com.greenteadev.unive.clair.ui.main;
 
-import java.util.List;
-
 import com.greenteadev.unive.clair.data.model.Station;
 import com.greenteadev.unive.clair.data.model.StationMeasure;
 import com.greenteadev.unive.clair.ui.base.MvpView;
+
+import java.util.List;
 
 public interface MainMvpView extends MvpView {
 

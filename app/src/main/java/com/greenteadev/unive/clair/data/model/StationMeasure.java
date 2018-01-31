@@ -1,7 +1,6 @@
 package com.greenteadev.unive.clair.data.model;
 
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.auto.value.AutoValue;

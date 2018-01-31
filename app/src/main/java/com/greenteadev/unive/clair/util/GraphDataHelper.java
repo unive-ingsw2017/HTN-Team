@@ -2,17 +2,14 @@ package com.greenteadev.unive.clair.util;
 
 import android.support.annotation.NonNull;
 
-import com.github.mikephil.charting.components.LimitLine;
 import com.google.common.collect.TreeMultimap;
+import com.greenteadev.unive.clair.data.model.MeasureData;
+import com.greenteadev.unive.clair.data.model.MeasurePlotData;
 
 import org.joda.time.LocalDate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NavigableSet;
-
-import com.greenteadev.unive.clair.data.model.MeasureData;
-import com.greenteadev.unive.clair.data.model.MeasurePlotData;
 
 /**
  * Created by Hitech95 on 16/01/2018.

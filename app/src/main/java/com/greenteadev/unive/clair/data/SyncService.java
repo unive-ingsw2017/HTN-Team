@@ -8,6 +8,12 @@ import android.net.ConnectivityManager;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
 
+import com.greenteadev.unive.clair.ClairApplication;
+import com.greenteadev.unive.clair.data.model.MeasureData;
+import com.greenteadev.unive.clair.util.AndroidComponentUtil;
+import com.greenteadev.unive.clair.util.NetworkUtil;
+import com.greenteadev.unive.clair.util.RxUtil;
+
 import java.util.List;
 
 import javax.inject.Inject;
@@ -15,11 +21,6 @@ import javax.inject.Inject;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import com.greenteadev.unive.clair.ClairApplication;
-import com.greenteadev.unive.clair.data.model.MeasureData;
-import com.greenteadev.unive.clair.util.AndroidComponentUtil;
-import com.greenteadev.unive.clair.util.NetworkUtil;
-import com.greenteadev.unive.clair.util.RxUtil;
 import timber.log.Timber;
 
 /**

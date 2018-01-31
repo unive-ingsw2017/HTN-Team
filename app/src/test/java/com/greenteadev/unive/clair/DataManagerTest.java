@@ -1,17 +1,15 @@
 package com.greenteadev.unive.clair;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-
 import com.greenteadev.unive.clair.data.DataManager;
 import com.greenteadev.unive.clair.data.local.DatabaseHelper;
 import com.greenteadev.unive.clair.data.local.PreferencesHelper;
 import com.greenteadev.unive.clair.data.remote.ApiService;
 
-import static org.mockito.Mockito.verify;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 /**
  * This test class performs local unit tests without dependencies on the Android framework

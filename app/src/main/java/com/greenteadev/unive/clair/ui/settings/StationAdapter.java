@@ -7,11 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.greenteadev.unive.clair.data.model.Station;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import it.greenteadev.unive.clair.R;
-import com.greenteadev.unive.clair.data.model.Station;
 
 /**
  * Created by Hitech95 on 30/01/2018.

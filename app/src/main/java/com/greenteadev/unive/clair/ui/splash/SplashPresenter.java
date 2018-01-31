@@ -2,12 +2,9 @@ package com.greenteadev.unive.clair.ui.splash;
 
 import com.greenteadev.unive.clair.data.DataManager;
 import com.greenteadev.unive.clair.data.model.MeasureData;
-import com.greenteadev.unive.clair.data.model.Station;
 import com.greenteadev.unive.clair.ui.base.BasePresenter;
-import com.greenteadev.unive.clair.ui.main.MainMvpView;
 import com.greenteadev.unive.clair.util.RxUtil;
 
-import java.net.ConnectException;
 import java.util.List;
 
 import javax.inject.Inject;

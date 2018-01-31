@@ -1,49 +1,24 @@
 package com.greenteadev.unive.clair.ui.history;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.support.annotation.NonNull;
+import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
-import android.support.v4.util.Pair;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.util.Pair;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import butterknife.BindColor;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
-import it.greenteadev.unive.clair.R;
-import timber.log.Timber;
 
 import com.evernote.android.state.State;
 import com.evernote.android.state.StateSaver;
-import com.github.mikephil.charting.animation.Easing;
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.LimitLine;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
 import com.google.common.collect.TreeMultimap;
-import com.google.gson.Gson;
 import com.greenteadev.unive.clair.data.model.MeasureData;
 import com.greenteadev.unive.clair.data.model.MeasurePlotData;
 import com.greenteadev.unive.clair.data.model.Station;
@@ -53,20 +28,21 @@ import com.greenteadev.unive.clair.reference.MeasureThreshold;
 import com.greenteadev.unive.clair.ui.base.BaseActivity;
 import com.greenteadev.unive.clair.ui.widget.ProgressFrameLayout;
 import com.greenteadev.unive.clair.util.DateUtils;
-import com.greenteadev.unive.clair.util.GraphDataHelper;
-import com.greenteadev.unive.clair.util.chart.MonthXAxisFormatter;
-import com.greenteadev.unive.clair.util.chart.WeekXAxisFormatter;
-import com.greenteadev.unive.clair.util.chart.YearXAxisFormatter;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.MaterialIcons;
 
 import org.joda.time.LocalDate;
-import org.joda.time.LocalDateTime;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import it.greenteadev.unive.clair.R;
+import timber.log.Timber;
 
 public class HistoryActivity extends BaseActivity implements HistoryMvpView {
 

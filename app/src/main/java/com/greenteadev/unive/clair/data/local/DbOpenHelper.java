@@ -4,10 +4,10 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.greenteadev.unive.clair.injection.ApplicationContext;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
-
-import com.greenteadev.unive.clair.injection.ApplicationContext;
 
 @Singleton
 public class DbOpenHelper extends SQLiteOpenHelper {

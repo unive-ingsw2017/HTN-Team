@@ -3,8 +3,9 @@ package com.greenteadev.unive.clair.runner;
 import android.os.Bundle;
 import android.support.test.espresso.Espresso;
 
-import io.reactivex.plugins.RxJavaPlugins;
 import com.greenteadev.unive.clair.util.RxEspressoScheduleHandler;
+
+import io.reactivex.plugins.RxJavaPlugins;
 
 /**
  * Runner that registers a Espresso Indling resource that handles waiting for

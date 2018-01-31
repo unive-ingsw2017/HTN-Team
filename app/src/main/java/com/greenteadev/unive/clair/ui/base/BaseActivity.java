@@ -4,13 +4,14 @@ import android.os.Bundle;
 import android.support.v4.util.LongSparseArray;
 import android.support.v7.app.AppCompatActivity;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 import com.greenteadev.unive.clair.ClairApplication;
 import com.greenteadev.unive.clair.injection.component.ActivityComponent;
 import com.greenteadev.unive.clair.injection.component.ConfigPersistentComponent;
 import com.greenteadev.unive.clair.injection.component.DaggerConfigPersistentComponent;
 import com.greenteadev.unive.clair.injection.module.ActivityModule;
+
+import java.util.concurrent.atomic.AtomicLong;
+
 import timber.log.Timber;
 
 /**

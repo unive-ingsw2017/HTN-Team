@@ -2,17 +2,17 @@ package com.greenteadev.unive.clair.data.remote;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import org.joda.time.LocalDateTime;
-
-import io.reactivex.Observable;
-import it.greenteadev.unive.clair.BuildConfig;
 import com.greenteadev.unive.clair.data.LocalDateTimeTypeAdapter;
 import com.greenteadev.unive.clair.data.model.CoordsResponse;
 import com.greenteadev.unive.clair.data.model.MeasureResponse;
 import com.greenteadev.unive.clair.data.model.StationResponse;
 import com.greenteadev.unive.clair.reference.Endpoint;
 import com.greenteadev.unive.clair.util.MyGsonTypeAdapterFactory;
+
+import org.joda.time.LocalDateTime;
+
+import io.reactivex.Observable;
+import it.greenteadev.unive.clair.BuildConfig;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;

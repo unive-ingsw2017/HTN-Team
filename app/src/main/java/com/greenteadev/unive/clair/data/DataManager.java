@@ -1,17 +1,5 @@
 package com.greenteadev.unive.clair.data;
 
-import android.util.Pair;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.NavigableSet;
-
-import javax.inject.Inject;
-import javax.inject.Singleton;
-
-import io.reactivex.Observable;
-
 import com.google.common.collect.TreeMultimap;
 import com.greenteadev.unive.clair.data.local.DatabaseHelper;
 import com.greenteadev.unive.clair.data.local.PreferencesHelper;
@@ -28,6 +16,14 @@ import com.greenteadev.unive.clair.data.model.StationResponse;
 import com.greenteadev.unive.clair.data.remote.ApiService;
 import com.greenteadev.unive.clair.reference.Search;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+import io.reactivex.Observable;
 import me.xdrop.fuzzywuzzy.FuzzySearch;
 import timber.log.Timber;
 

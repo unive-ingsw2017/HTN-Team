@@ -2,15 +2,15 @@ package com.greenteadev.unive.clair.test.common;
 
 import android.content.Context;
 
-import org.junit.rules.TestRule;
-import org.junit.runner.Description;
-import org.junit.runners.model.Statement;
-
 import com.greenteadev.unive.clair.ClairApplication;
 import com.greenteadev.unive.clair.data.DataManager;
 import com.greenteadev.unive.clair.test.common.injection.component.DaggerTestComponent;
 import com.greenteadev.unive.clair.test.common.injection.component.TestComponent;
 import com.greenteadev.unive.clair.test.common.injection.module.ApplicationTestModule;
+
+import org.junit.rules.TestRule;
+import org.junit.runner.Description;
+import org.junit.runners.model.Statement;
 
 /**
  * Test rule that creates and sets a Dagger TestComponent into the application overriding the

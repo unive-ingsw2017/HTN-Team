@@ -7,13 +7,12 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
+import com.greenteadev.unive.clair.reference.Endpoint;
 
 import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;
 
 import java.lang.reflect.Type;
-
-import com.greenteadev.unive.clair.reference.Endpoint;
 
 /**
  * Created by Hitech95 on 11/01/2018.

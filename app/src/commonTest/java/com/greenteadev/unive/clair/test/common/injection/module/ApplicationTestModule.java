@@ -3,15 +3,15 @@ package com.greenteadev.unive.clair.test.common.injection.module;
 import android.app.Application;
 import android.content.Context;
 
+import com.greenteadev.unive.clair.data.DataManager;
+import com.greenteadev.unive.clair.data.remote.ApiService;
+import com.greenteadev.unive.clair.injection.ApplicationContext;
 import com.squareup.leakcanary.RefWatcher;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import com.greenteadev.unive.clair.data.DataManager;
-import com.greenteadev.unive.clair.data.remote.ApiService;
-import com.greenteadev.unive.clair.injection.ApplicationContext;
 
 import static org.mockito.Mockito.mock;
 

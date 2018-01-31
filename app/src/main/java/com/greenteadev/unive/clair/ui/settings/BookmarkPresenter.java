@@ -1,6 +1,10 @@
 package com.greenteadev.unive.clair.ui.settings;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
+import com.greenteadev.unive.clair.data.DataManager;
+import com.greenteadev.unive.clair.data.model.Station;
+import com.greenteadev.unive.clair.ui.base.BasePresenter;
+import com.greenteadev.unive.clair.util.RxUtil;
 
 import java.net.ConnectException;
 import java.util.List;
@@ -12,12 +16,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-
-import com.greenteadev.unive.clair.data.DataManager;
-import com.greenteadev.unive.clair.data.model.Station;
-import com.greenteadev.unive.clair.ui.base.BasePresenter;
-import com.greenteadev.unive.clair.util.RxUtil;
-
 import timber.log.Timber;
 
 /**

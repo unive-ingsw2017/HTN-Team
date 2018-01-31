@@ -2,12 +2,11 @@ package com.greenteadev.unive.clair.util.chart;
 
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.greenteadev.unive.clair.reference.DateFormat;
 
 import org.joda.time.LocalDate;
 
 import java.util.List;
-
-import com.greenteadev.unive.clair.reference.DateFormat;
 
 /**
  * Created by Hitech95 on 22/01/2018.

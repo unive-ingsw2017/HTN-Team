@@ -3,9 +3,10 @@ package com.greenteadev.unive.clair.injection.module;
 import android.app.Activity;
 import android.content.Context;
 
+import com.greenteadev.unive.clair.injection.ActivityContext;
+
 import dagger.Module;
 import dagger.Provides;
-import com.greenteadev.unive.clair.injection.ActivityContext;
 
 @Module
 public class ActivityModule {

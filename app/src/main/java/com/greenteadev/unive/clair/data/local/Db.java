@@ -3,13 +3,13 @@ package com.greenteadev.unive.clair.data.local;
 import android.content.ContentValues;
 import android.database.Cursor;
 
-import org.joda.time.LocalDate;
-import org.joda.time.LocalTime;
-
 import com.greenteadev.unive.clair.data.model.Coordinate;
 import com.greenteadev.unive.clair.data.model.MeasureData;
 import com.greenteadev.unive.clair.data.model.MeasurePlotData;
 import com.greenteadev.unive.clair.data.model.Station;
+
+import org.joda.time.LocalDate;
+import org.joda.time.LocalTime;
 
 public class Db {
 

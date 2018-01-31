@@ -6,14 +6,15 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
+import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
+
+import com.greenteadev.unive.clair.ui.base.AppCompatPreferenceActivity;
 
 import java.util.List;
 
 import it.greenteadev.unive.clair.R;
-import com.greenteadev.unive.clair.ui.base.AppCompatPreferenceActivity;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On

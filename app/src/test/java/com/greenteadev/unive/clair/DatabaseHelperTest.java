@@ -1,5 +1,10 @@
 package com.greenteadev.unive.clair;
 
+import com.greenteadev.unive.clair.data.local.DatabaseHelper;
+import com.greenteadev.unive.clair.data.local.DbOpenHelper;
+import com.greenteadev.unive.clair.util.DefaultConfig;
+import com.greenteadev.unive.clair.util.RxSchedulersOverrideRule;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -7,13 +12,6 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-
-import com.greenteadev.unive.clair.data.local.DatabaseHelper;
-import com.greenteadev.unive.clair.data.local.DbOpenHelper;
-import com.greenteadev.unive.clair.util.DefaultConfig;
-import com.greenteadev.unive.clair.util.RxSchedulersOverrideRule;
-
-import static junit.framework.Assert.assertEquals;
 
 /**
  * Unit tests integration with a SQLite Database using Robolectric
